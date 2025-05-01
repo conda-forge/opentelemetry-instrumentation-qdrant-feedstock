@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-qdrant" %}
-{% set version = "0.39.4" %}
+{% set version = "0.40.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_qdrant-{{ version }}.tar.gz
-  sha256: ce05c5eb5a234b57fb502710e9429049bfa7b3ddf2a8c9eceee91ac8d6e07512
+  sha256: 3435f995f3e081c493b5e727477da0eedc2d3d04d61c7d0401a1f999304979b3
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - opentelemetry-api >=1.28.0,<2.0.0
     - opentelemetry-instrumentation >=0.50b0
     - opentelemetry-semantic-conventions >=0.50b0
-    - opentelemetry-semantic-conventions-ai 0.4.3
+    - opentelemetry-semantic-conventions-ai 0.4.5
   run_constrained:
     - qdrant-client >=1.9.1,<2.0.0
 
