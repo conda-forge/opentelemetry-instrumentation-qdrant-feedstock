@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-qdrant" %}
-{% set version = "0.43.0" %}
+{% set version = "0.43.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_qdrant-{{ version }}.tar.gz
-  sha256: 17ce9301a19edd5f39b83d7697c2d2cbea56714887a7a9c7429184c2c39c68df
+  sha256: e46730b5ea34686ebea0c1659ef661c41de200e355db85333b7be68969aac252
 
 build:
   noarch: python
