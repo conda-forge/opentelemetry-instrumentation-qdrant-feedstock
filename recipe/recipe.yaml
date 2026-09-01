@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - hatchling
     - pip
   run:
@@ -32,13 +32,14 @@ requirements:
     - qdrant-client >=1.9.1,<2.0.0
 
 tests:
-  - python:
-      imports:
-        - opentelemetry.instrumentation.qdrant
-      pip_check: true
-      python_version:
-        - ${{ python_min }}
-        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - qdrant-client
+        - pip
+    script:
+      - python -c "import opentelemetry.instrumentation.qdrant"
+      - pip check
 
 about:
   summary: OpenTelemetry Qdrant instrumentation
