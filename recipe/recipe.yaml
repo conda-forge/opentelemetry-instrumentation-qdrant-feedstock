@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: opentelemetry-instrumentation-qdrant
-  version: "0.62.3"
+  version: "0.62.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/opentelemetry_instrumentation_qdrant-${{ version }}.tar.gz
-  sha256: 81f762abdb77dff886726594e0c47e3c7ebb8a779e9fa011c68ef5ded27909e4
+  sha256: 367e11e4bc88e3cb86eef20222a4ff3555270e1da3cf0e3265867881b5d5762d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
